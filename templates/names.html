@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if names %}
+        {% for name in names %}
+            <h1>Name: {{ name['name'] }}</h1>
+            <p>Created: {{ name['timestamp'] }}</p>
+        {% endfor %}
+    {% else %}
+        <h1>No names entered yet</h1>
+    {% endif %}
+{% endblock %}
